@@ -15,7 +15,7 @@ const GiftCards = () => {
     <div className="w-screen flex justify-center overflow-hidden my-10">
       <div className="w-full sm:w-[90%] sm:flex flex-col relative h-full">
         <div className="flex w-full h-full relative">
-          <div className="hidden sm:flex flex-col sm:w-[320px] relative   py-14 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-lg backdrop-blur-md">
+          <div className="hidden sm:flex flex-col sm:w-[320px] relative   pt-14 pb-6 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-lg backdrop-blur-md">
             {sidebarData.map((current, index) => (
               <>
                 {current.isActive ? (
@@ -85,7 +85,7 @@ const GiftCards = () => {
           )}
           {/* content area */}
           <div className="flex flex-col gap-0 w-screen h-full sm:w-full">
-            <div className="-z-50 flex flex-wrap w-screen sm:w-full gap-[2px] sm:gap-4  mx-1 sm:mx-10 h-full py-4 sm:py-8 justify-center items-start  ">
+            <div className="-z-50 flex flex-wrap w-screen sm:w-full gap-[2px] sm:gap-4  mx-1 sm:mx-20 h-full py-4 sm:py-8  items-start  ">
               {giftData.map((current, index) => (
                 <GiftCard giftCard={current} />
               ))}
