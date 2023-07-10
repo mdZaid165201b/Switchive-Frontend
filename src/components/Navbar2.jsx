@@ -20,7 +20,7 @@ const Navbar2 = () => {
             <div className="hidden w-full h-full sm:flex flex-col justify-end ">
               <div className="flex justify-between">
                 {menuData.map((current, index) => (
-                  <div className="hover:text-[#a10e46] cursor-pointer duration-100">
+                  <div className="hover:text-[#a10e46] cursor-pointer duration-100" key={current.title}>
                     {current.title}
                   </div>
                 ))}
