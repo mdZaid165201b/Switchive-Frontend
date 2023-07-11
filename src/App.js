@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import GiftCards from "./pages/GiftCards";
 import Navbar from "./components/Navbar2";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/"  element={<Home />} />
         <Route path="/giftCards"  element={<GiftCards />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -18,7 +18,7 @@ const Home = () => {
       <ManageSection />
       <Banner />
       <SupportedPayementSection />
-      <Footer />
+      {/* <Footer /> */}
       
     </div>
   );

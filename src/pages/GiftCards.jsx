@@ -15,7 +15,7 @@ const GiftCards = () => {
     <div className="w-screen flex justify-center overflow-hidden my-10">
       <div className="w-full sm:w-[90%] sm:flex flex-col relative h-full">
         <div className="flex w-full h-full relative">
-          <div className="hidden sm:flex flex-col sm:w-[320px] relative   pt-14 pb-6 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-lg backdrop-blur-md">
+          <div className="hidden sm:flex flex-col sm:w-[320px] relative   pt-14 pb-6 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-xl backdrop-blur-md">
             {sidebarData.map((current, index) => (
               <>
                 {current.isActive ? (
@@ -99,8 +99,45 @@ const GiftCards = () => {
             </div>
           </div>
         </div>
-        <div className="border-2 border-teal-700 w-full h-[400px] my-10">
-          Testing
+        <div className=" flex flex-col gap-6 p-10 w-full my-10">
+          <div className="">
+            <h1 className="text-xl text-[#214293] font-bold">
+              Choose from 2000+ brands
+            </h1>
+            <p className="tracking-wide leading-10">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover it has a more-or-less normal distribution of letters, as
+              opposed to using 'Content here, content here', making it look like
+              readable English. Many desktop publishing packages and web page
+              editors now use Lorem Ipsum as their default model text, and a
+              search for 'lorem ipsum' will uncover
+            </p>
+          </div>
+          <div className="">
+            <h1 className="text-xl text-[#214293] font-bold">
+              Why Buying a gift card ?
+            </h1>
+            <p className="tracking-wide leading-10">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover it has a more-or-less normal distribution of letters, as
+              opposed to using 'Content here, content here', making it look like
+              readable English. Many desktop publishing packages and web page
+              editors now use Lorem Ipsum as their default model text, and a
+              search for 'lorem ipsum' will uncover
+            </p>
+          </div>
         </div>
       </div>
     </div>
