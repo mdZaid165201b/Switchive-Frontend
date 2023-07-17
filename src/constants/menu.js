@@ -1,11 +1,11 @@
 export const menuData = [
     {
         title: 'Mobile Top Up',
-        link: ''
+        link: '/giftCards'
     },
     {
         title: 'Gift Cards',
-        link: ''
+        link: '/giftCards'
     },
     {
         title: 'Blogs',

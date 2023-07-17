@@ -10,12 +10,19 @@ const GiftCards = () => {
   const [giftData, setGiftData] = useState([]);
   const [sidebarData, setSidebarData] = useState(sidebarItems);
   console.log({ giftData });
-
+  const sidebarHandlerHelper = (currentIndex) => {
+    const data = sidebarData.map((current, index) => {
+        current.isActive = false;
+        return current;
+    })
+    data[currentIndex].isActive = true; 
+    setSidebarData(data)
+  }
   return (
     <div className="w-screen flex justify-center overflow-hidden my-10">
       <div className="w-full sm:w-[90%] sm:flex flex-col relative h-full">
         <div className="flex w-full h-full relative">
-          <div className="hidden sm:flex flex-col sm:w-[320px] relative   pt-14 pb-6 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-xl backdrop-blur-md">
+          <div className="hidden sm:flex flex-col sm:w-[320px] relative   pt-14 pb-24 h-full  bg-gradient-to-r from-[#214293] to-[#af2c37] rounded-xl backdrop-blur-md">
             {sidebarData.map((current, index) => (
               <>
                 {current.isActive ? (
@@ -42,13 +49,14 @@ const GiftCards = () => {
                         (element) => element.title === current.title
                       );
                       console.log(currenData);
-                      setSidebarData([
-                        ...sidebarData,
-                        {
-                          title: sidebarData[currenData].title,
-                          isActive: (sidebarData[currenData].isActive = true),
-                        },
-                      ]);
+                      sidebarHandlerHelper(currenData);
+                      // setSidebarData([
+                      //   ...sidebarData,
+                      //   {
+                      //     title: sidebarData[currenData].title,
+                      //     isActive: (sidebarData[currenData].isActive = true),
+                      //   },
+                      // ]);
                     }}
                   >
                     {current.title}
@@ -60,11 +68,11 @@ const GiftCards = () => {
 
           {/* right side */}
           <BiMenuAltLeft
-            className="flex sm:hidden mx-4 text-3xl"
+            className="flex  sm:hidden mx-4 text-3xl w-[100px] m-8 sm:m-0 text-red-800 border border-red-700 "
             onClick={() => setMenu(!isMenuOpen)}
           />
           {isMenuOpen && (
-            <div className=" sm:hidden w-[200px]  flex flex-col items-center h-[540px]  bg-gradient-to-r from-[#214293] to-[#af2c37] z-40 absolute text-gray-200 overflow-y-auto transition-all ease-in-out duration-150 rounded-tr-xl rounded-br-xl">
+            <div className=" sm:hidden w-[200px]  flex flex-col items-center h-[540px] my-6 bg-gradient-to-r from-[#214293] to-[#af2c37] z-40 absolute text-gray-200 overflow-y-auto transition-all ease-in-out duration-150 rounded-tr-xl rounded-br-xl">
               {sidebarItems.map((current, index) => (
                 <div
                   className={`text-[16px] ${
@@ -84,7 +92,7 @@ const GiftCards = () => {
             </div>
           )}
           {/* content area */}
-          <div className="flex flex-col gap-0 w-screen h-full sm:w-full">
+          <div className="flex flex-col gap-0 w-screen h-full my-5 sm:my-0 sm:w-full">
             <div className="-z-50 flex flex-wrap w-screen sm:w-full gap-[2px] sm:gap-4  mx-1 sm:mx-20 h-full py-4 sm:py-8  items-start  ">
               {giftData.map((current, index) => (
                 <GiftCard giftCard={current} />

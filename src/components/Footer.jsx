@@ -23,7 +23,7 @@ const Footer = () => {
               </h1>
             </div>
           </div>
-          <div className="w-full flex justify-center text-sm sm:text-md text-white">
+          <div className="w-full flex justify-start text-sm sm:text-md font-semibold text-gray-900">
             <h1 className="tracking-normal sm:tracking-wide">
               Copyright 2022, Switchive
             </h1>

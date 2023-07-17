@@ -4,7 +4,7 @@ import wallet from "../assets/wallet.png";
 import { menuData } from "../constants/menu";
 import { IoIosSearch } from "react-icons/io";
 import { PiShoppingCartThin } from "react-icons/pi";
-import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const Navbar2 = () => {
   return (
@@ -13,16 +13,23 @@ const Navbar2 = () => {
         {/* left side */}
         <div className=" w-[50%] h-full flex flex-col">
           <div className="px-[20px] sm:px-[30px] pt-[15px] w-[80%] h-full flex flex-col">
-            <div className="w-[200px] h-[10px] sm:w-[279px] sm:h-[50px]">
-              <img src={logo} alt="" className="w-[260px] h-[50px]" />
-            </div>
+            <Link to="/">
+              <div className="w-[200px] h-[10px] sm:w-[279px] sm:h-[50px]">
+                <img src={logo} alt="" className="w-[260px] h-[50px]" />
+              </div>
+            </Link>
             {/* menu items */}
             <div className="hidden w-full h-full sm:flex flex-col justify-end ">
               <div className="flex justify-between">
                 {menuData.map((current, index) => (
-                  <div className="hover:text-[#a10e46] cursor-pointer duration-100" key={current.title}>
-                    {current.title}
-                  </div>
+                  <Link to={current.link}>
+                    <div
+                      className="hover:text-[#a10e46] cursor-pointer duration-100"
+                      key={current.title}
+                    >
+                      {current.title}
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -94,7 +101,7 @@ const Navbar2 = () => {
                 <div
                   className={`w-[55px] h-[22px] sm:w-[108px] sm:h-[40px] flex justify-center items-center p-4 rounded-md  text-gray-900 hover:text-white  tracking-wide hover:bg-[#DB3434] duration-100 cursor-pointer`}
                 >
-                  Login
+                  Signup
                 </div>
               </div>
             </div>
